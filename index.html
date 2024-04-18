@@ -10,77 +10,116 @@
     
     <h1> An Analysis of Electric Vehicles in the State of Washington</h1>
 
-    <h3>Overall Introduction</h3>
+    <h3>Project Introduction</h3>
 
-    <p>With the worsening effects of climate change and global warming becoming 
+    <p> With the worsening effects of climate change and global warming becoming 
         greatly apparent, people are looking for ways that they can individually 
-        reduce their carbon footprint. According to the 
-        <a href="https://www.frontiersin.org/articles/10.3389/fmech.2022.896547/full">research article </a>“Electric 
-        Vehicle Modelling for Future Technology and Market Penetration Analysis”, the 
+        reduce their carbon footprint. According to the research article
+        <a href="https://www.frontiersin.org/articles/10.3389/fmech.2022.896547/full">“Electric 
+        Vehicle Modelling for Future Technology and Market Penetration Analysis”</a>, the 
         transportation sector is responsible for up to 25% of greenhouse gas emissions 
-        globally.  </p>
-
-    <p>In the United States of America specifically, cars are the primary mode of 
+        globally. In the United States of America, cars are the primary mode of 
         transportation, and contribute to pollution through the emission of carbon 
-        dioxide, a particularly harmful greenhouse gas. Due to the increasing prevalence 
-        of EVs in the world, there are plenty of questions as to when a full adoption of 
-        EVs will occur, and how this transition will be imposed through policymaking. </p>
+        dioxide, a particularly harmful greenhouse gas. 
+    </p>
+
+    <p> To combat this issue, electric vehicles (EVs) have surged in popularity nationally, as
+        EVs utilize batteries or other sustainable fuel sources that avoid the carbon dioxide 
+        emissions of traditional cars. Due to the increasing prevalence of EVs in the world, 
+        questions have arisen as to the timeline and practicality of a mainstream adoption of EVs, 
+        and how this transition will be imposed through policymaking. Current utilization of EVs 
+        act as guides for consumer interests in the field, and identifies areas of concern in terms
+        of implementation, consumer acceptance, and accessibility. 
+    </p>
 
 
     <h3>Introduction to the Data</h3>
 
-    <p> This data set explores the use of eco-friendly transportation. It can be 
-        used to encourage users to look into electric vehicles to improve sustainability. 
-        The data includes 17 columns and 166,800 rows. The column names include VIN (1-10), 
-        County, City, State, Postal Code, Model Year, Make, Model, Electric Vehicle Type, 
-        Clean Alternative Fuel Vehicle Eligibility, Electric Range, Base MSRP, Legislative 
-        District, DOL Vehicle ID, Vehicle Location, Electric Utility, 2020 Census Tract. 
-        The detail information about the features are listed in the following table:</p>  
+    <p> This project utilizes the "Electric Vehicle Population Dataset" from Kaggle. This 
+        data set is updated annually and draws its data from the Washington State Department
+        of Licensing (DOL). It can be used to draw insights from electric vehicle usage in 
+        the state, and how those findings may apply nationally to improve sustainability. 
+        The data includes 17 columns and 166,800 rows. Of the 17 columns, 15 columns 
+        represent categorical data, while 2 columns represent continuous data. Detailed 
+        information about the features are listed in the following table:
+    </p>  
 
         <div class="center">
         <table class="tg">
             <thead>
               <tr>
-                <th class="tg-0lax">Variable Name</th>
-                <th class="tg-0lax">Details</th>
+                <th class="tg-0lax">Dataset Attribute</th>
+                <th class="tg-0lax">Attribute Description</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td class="tg-0lax">VIN (1-10)</td>
+                <td class="tg-0lax">First 10 characters of the vehicle's Vehicle Identification Number</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">County</td>
+                <td class="tg-0lax">County of residence for registered vehicle owner</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">City</td>
+                <td class="tg-0lax">City of residence for registered vehicle owner</td>
+              </tr>
+              <tr>
                 <td class="tg-0lax">State</td>
-                <td class="tg-0lax">State name</td>
+                <td class="tg-0lax">State of residence for registered vehicle owner</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Violent_Crime</td>
-                <td class="tg-0lax">Violent crime rate (per 100,000 residents)</td>
+                <td class="tg-0lax">Postal Code</td>
+                <td class="tg-0lax">5 digit zip code of residence of registered vehicle owner</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Murder_Rate</td>
-                <td class="tg-0lax">Murder rate (per 100,000 residents)</td>
+                <td class="tg-0lax">Model Year</td>
+                <td class="tg-0lax">Model year of vehicle, determined by VIN</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Poverty</td>
-                <td class="tg-0lax">Percent of residents below the poverty rate</td>
+                <td class="tg-0lax">Make</td>
+                <td class="tg-0lax">Manufacturer of vehicle, determined by VIN</td>
               </tr>
               <tr>
-                <td class="tg-0lax">High_School</td>
-                <td class="tg-0lax">Percent of residents with a high school degree</td>
+                <td class="tg-0lax">Model</td>
+                <td class="tg-0lax">Specific version, or name, of the vehicle</td>
               </tr>
               <tr>
-                <td class="tg-0lax">College</td>
-                <td class="tg-0lax">Percent of residents with a four-year college degree</td>
+                <td class="tg-0lax">Electric Vehicle Type</td>
+                <td class="tg-0lax">Battery Electric Vehicle or Plug-in Hybrid Electric Vehicle</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Single_Parent</td>
-                <td class="tg-0lax">Percent of children living in single parent families</td>
+                <td class="tg-0lax">Clean Alternative Fuel Vehicle (CAFV) Eligibility</td>
+                <td class="tg-0lax">Determines if vehicles is a CAFV based on House Bill 2042</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Unemployed</td>
-                <td class="tg-0lax">Unemployment rate</td>
+                <td class="tg-0lax">Electric Range</td>
+                <td class="tg-0lax">How far a vehicle can travel on electric charge</td>
               </tr>
               <tr>
-                <td class="tg-0lax">Metropolitan</td>
-                <td class="tg-0lax">Percent of residents living in a metropolitan area</td>
+                <td class="tg-0lax">Base MSRP</td>
+                <td class="tg-0lax">Lowest Manufacturer's Suggested Retail Price for vehicle model</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">Legislative District</td>
+                <td class="tg-0lax">Location of vehicle as represented in the state legislature</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">DOL Vehicle ID</td>
+                <td class="tg-0lax">Identification number given to the vehicle by the DOL</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">Vehicle Location</td>
+                <td class="tg-0lax">Center of zip code location of vehicle</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">Electric Utility</td>
+                <td class="tg-0lax">Electric utility company associated with vehicle location</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">2020 Census Tract</td>
+                <td class="tg-0lax">Geographic identifier based on the 2020 United States Census</td>
               </tr>
             </tbody>
             </table>
