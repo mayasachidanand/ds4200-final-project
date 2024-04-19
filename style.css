@@ -2,15 +2,18 @@ body {
     width: 1000px;
     margin: 0 auto;
     padding: 0 20px 20px 20px;
-    border: 3px solid black;
-  }
+    border: 3px solid #00563f;
+    background-color: #d0f0c0;
+    font-family: 'Times New Roman', Times, serif;
+}
 
 h1 {
     margin: 0;
-    padding: 20px 0;
+    padding: 22px 0;
     color: black;
     text-align: center;
-  }
+    font-size: 24px; 
+}
 
 .tg {
     border-collapse: collapse;
@@ -21,8 +24,7 @@ h1 {
     border-color: black;
     border-style: solid;
     border-width: 2px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px; 
     overflow: hidden;
     padding: 10px 5px;
     word-break: normal;
@@ -32,8 +34,7 @@ h1 {
     border-color: black;
     border-style: solid;
     border-width: 2px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px; 
     font-weight: bold;
     overflow: hidden;
     padding: 10px 5px;
@@ -53,7 +54,7 @@ h1 {
 
 .container {
     align-items: center;
-    display: flex;/* Align items vertically in center */
+    display: flex;
 }
 
 .container1 {
@@ -81,15 +82,14 @@ h1 {
 }
 
 .text {
-    margin-bottom: 20px; /* Add some space between text and iframe */
+    margin-bottom: 20px;
 }
 
 .image {
-    flex: 0 0 65%; /* Don't allow the image to grow or shrink */
-    margin-right: 20px; /* Add some space between image and text */
+    flex: 0 0 65%;
+    margin-right: 20px;
 }
 
 .text {
-    flex: 1; /* Allow text to grow to fill remaining space */
+    flex: 1;
 }
-
