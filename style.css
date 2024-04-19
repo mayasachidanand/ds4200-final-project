@@ -56,6 +56,22 @@ h1 {
     display: flex;/* Align items vertically in center */
 }
 
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    margin-bottom: 20px; /* Add some space between text and iframe */
+}
+
 .image {
     flex: 0 0 65%; /* Don't allow the image to grow or shrink */
     margin-right: 20px; /* Add some space between image and text */

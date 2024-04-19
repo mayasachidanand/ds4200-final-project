@@ -124,98 +124,61 @@
             </tbody>
             </table>
         </div>
-        <p>Meanwhile, we also believe that the geographical 
-            information is important when evaluating the unemployment
-            rate. Therefore, we also make use of geographical information 
-            on <a href="https://www.naturalearthdata.com/downloads/">Natural Earth</a>. 
-            The website provides the geographical information for making maps for US states. 
+        <p> While analyzing datasets where location plays a significant role, it is important to 
+            visualize data according to its geographical information. Since our data focuses on 
+            Washington state and provides the county of each registered vehicle, we utilized 
+            geographical data from <a href="https://www.naturalearthdata.com/downloads/">Natural Earth</a>.
+            Following is a choropleth map utilizing geographic counties data and our dataset.
         </p>
 
-        <p>To make a better data visualization, we remove the Alaska and Hawaii
-            from the data. Following is an interactive map for the 
-            lower 48 states in US. User can zoom in the map. The color
-            indicates the unemployment rate for each state. When click any 
-            state, other social factors will be revealed for the state. </p>
-
-            <div class = 'center'>
-                <iframe src="map.html" width="80%" height="400px" frameborder="0"></iframe>
-            </div>
-            
-            <p>In general, west coast states tend to have higher 
-                unemployment rate. On the east coast, West virginia 
-                and New York state tend to have higher unemplyment rate
-                than the others. In the south, Mississippi and Louisiana
-                are the ones with the much higher unemplyment rate.
-            </p>
-
-        <h3>Overview of the Unemployment rate</h3>
-        
-        <div class = 'container'>
+        <div class = 'container container1'>
             <div class = 'image'>
-                <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
-                <iframe src="histogram/finish.png" width="100%" height="400px" frameborder="0"></iframe>
+                <img src="choropleth.png" style="width: 100%;" alt="Choropleth Map">
             </div>
             <div class = 'text'>
-                <p> First, we present an overview of the unemployment rate
-                    for all 50 states. Alaska is the one with the 
-                    highest unemployment rate, which may due to the seasonal 
-                    business in the state. The effectiveness of labor market 
-                    policies and governance structures can influence unemployment 
-                    rates. Washington, D.C., being the seat of government, may 
-                    experience fluctuations in employment related to government 
-                    spending and policies. Mississippi and Louisiana have economies 
-                    that are heavily reliant on sectors such as agriculture, 
-                    manufacturing, and energy. Economic downturns or fluctuations 
-                    in these industries can impact employment opportunities. 
-                    Connecticut, South Dakota and Virginia have the lowest 
-                    unemplyment rate. These states often have diverse economies 
-                    with strong sectors such as technology, healthcare, finance, 
-                    and tourism. A diverse economy can provide more resilience to 
-                    economic downturns.
+                <p> Our choropleth map illustrates the prevalence of electric vehicles in 
+                    the different counties in Washington State, where darker regions indicates
+                    higher prevalence, and lighter regions indicates lower prevalence. This 
+                    visualization provides an overview of the location of our data and the 
+                    overall distribution of all registered electric vehicles. 
                 </p>
             </div>            
         </div>
+
+        <h3>Registered Electric Vehicles State-Wide</h3>
         
-        <h3> The relationship between unemployment rate and other social factors</h3>
+        <p></p>
+        
+        <h3>Popularity of Electric Vehicle Types</h3>
 
-        <div class = 'container'>
-            <div class = 'text'>
-                <p>Moreover, we also want to examine the relationship between
-                    unemployment rate and other social factors in the data. All 
-                    features are numerical thus we firts create a correlation
-                    plot to examine whether there are linear relationship between 
-                    unemployment rate with other social factors. Notice that if 
-                    the correlation is small, it only means that there is no potential
-                    linear relationship between two features. 
+        <div class = 'text'>
+            <p> Furthermore, we also want to explore the type of electric vehicle
+                that holds popularity within the state. As described in the attributes
+                table above, an EV can be classified as either a "Battery Electric Vehicle"
+                or a "Plug-in Hybrid Electric Vehicle". A <a href="https://afdc.energy.gov/vehicles/how-do-all-electric-cars-work">
+                Battery Electric Vehicle</a> is an EV that has an electric motor instead of a combustion engine, and is powered
+                solely by a battery pack. A <a href="https://afdc.energy.gov/vehicles/electric-basics-phev">Plug-in Hybrid Electric Vehicle</a> 
+                is an EV that has an electric motor powered by a battery, as well as a combustion 
+                engine powered by another fuel source, such as gasoline. 
+            </p>
+
+            <p> This bar chart depicts the distribution of vehicle types for the ten counties
+                with the highest number of registered electric vehicles. King County has 
+                significantly more electric vehicles than any other county; interestingly, 
+                King County is also the wealthiest county in the state and it encompasses the
+                most highly populated city (Seattle). While the high number of registrations may 
+                correlate primarily with the large population of Seattle, socioeconomic status 
+                may also correspond with electric vehicle prevalence. Thus, if state or local 
+                governments would like to increase electric vehicle use for sustainability reasons,
+                they may consider subsidizing these vehicles or exploring other avenues to increase
+                accessibility.
+                     
                 </p>
-                <p>
-                    Based on the correlation plot, among all the features, poverty 
-                    has the strongest correlation with the unemployment rate since
-                    they are both related to the economics. The percentage of single 
-                    parents is the second important feature which inidicates the 
-                    stability of family is also strongly related to the job market. 
-                    The increase of unemployment rate may also related to the increase 
-                    of violent crime and murder rate but has a negative relationship
-                    with education indicators, like the percentage of people who go to
-                    high school and college. The only variable that has no direct linear
-                    relation with the unemployment rate is Metropolitan, which means the 
-                    percent of residents living in a metropolitan area. 
-                </p>
-            </div>
-            <div class = 'image'>
-                <img src="correlation_plot.png" width="100%" height="500px" frameborder="0"></img>
-            </div>   
         </div>
-
-        <p>We have also create an interactive scatter plot so that 
-            our users can select a couple of states within
-            a certain range of unemployment rate and to see how the 
-            other factors may be related here. 
-        </p>
 
         <div class = 'center'>
-            <iframe src="scatter.html" width="85%" height="550px" frameborder="0"></iframe>
-        </div>
+            <iframe src="altair-bar.html" width="100%" height="500px" frameborder="0"></iframe>
+        </div>   
 
         <h3>Compare MA to the other states</h3>
 
