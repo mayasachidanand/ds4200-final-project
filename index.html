@@ -144,10 +144,6 @@
                 </p>
             </div>            
         </div>
-
-        <h3>Registered Electric Vehicles State-Wide</h3>
-        
-        <p></p>
         
         <h3>Popularity of Electric Vehicle Types</h3>
 
@@ -161,55 +157,154 @@
                 is an EV that has an electric motor powered by a battery, as well as a combustion 
                 engine powered by another fuel source, such as gasoline. 
             </p>
-
-            <p> This bar chart depicts the distribution of vehicle types for the ten counties
-                with the highest number of registered electric vehicles. King County has 
-                significantly more electric vehicles than any other county; interestingly, 
-                King County is also the wealthiest county in the state and it encompasses the
-                most highly populated city (Seattle). While the high number of registrations may 
-                correlate primarily with the large population of Seattle, socioeconomic status 
-                may also correspond with electric vehicle prevalence. Thus, if state or local 
-                governments would like to increase electric vehicle use for sustainability reasons,
-                they may consider subsidizing these vehicles or exploring other avenues to increase
-                accessibility.
-                     
-                </p>
         </div>
 
         <div class = 'center'>
-            <iframe src="altair-bar.html" width="100%" height="500px" frameborder="0"></iframe>
+            <iframe src="displot.html" width="100%" height="500px" frameborder="0"></iframe>
         </div>   
 
-        <h3>Compare MA to the other states</h3>
+        <div class = 'text'>
+            <p> The stacked bar chart above depicts the distribution of vehicle types for the ten counties
+                with the highest number of registered electric vehicles. The visualization includes 
+                a tooltip feature that allows users to hover over the blue or red region of the bar and 
+                see the Electric Vehicle Type, County, and the number of EVs of that type registered in 
+                the county. Across all ten counties, the Battery Electric Vehicle tends to be more 
+                popular than the Plug-in Hybrid Electric Vehicle. This information may be helpful for 
+                EV manufacturers to understand what Electric Vehicle Types are most popular amongst consumers
+                and strive to meet demand. 
+            </p>
 
-        <p>
-            Since we are in MA, thus we want to take a closer look between
-            MA and other states. We create the following interactive plot
-            such that user can choose another state to compare with MA and 
-            show the bar plot on each factors. 
-        </p>
-
-        <div class = 'center'>
-            <iframe src="summary.html" width="95%" height="300px" frameborder="0"></iframe>
+            <p>
+                Moreover, King County has significantly more electric vehicles than any other county; 
+                interestingly, King County is also the wealthiest county in the state and it encompasses 
+                the most highly populated city, Seattle. While the high number of registrations may 
+                correlate primarily with the large population of Seattle, socioeconomic status may also 
+                play a factor. Electric vehicles can be expensive, and out of budget for those in less wealthy
+                counties. Thus, if state governments would like to increase electric vehicle use for sustainability
+                reasons, they may consider subsidizing vehicles or targeting legislation promoting electric vehicles
+                to counties with lower EV registrations. 
+            </p>
         </div>
 
-        <h3>Summary and additional work</h3>
+        <h3>Locations of Registered Electric Vehicles State-Wide</h3>
+        
+        <div class = 'container container2'>
+            <div class = 'text'>
+                <p>
+                    Although understanding distributions of EVs by county is important, especially in understanding
+                    regional differences, counties can be large areas of land where distribution is not even. For that reason,
+                    it is important to observe the specific locations of electric vehicles in our dataset, as depicted 
+                    in the map below:
+                </p>
+            </div>
+            <div class = 'center'>
+                <iframe src="interactive-map.html" width="100%" height="500px" frameborder="0"></iframe>
+            </div>
+            <div class = 'text'>
+                <p>
+                    In this interactive visualization, each dot represents a registered EV in the state of Washington, 
+                    and clicking on a dot produces a popup for the user to view the Make and Model of the vehicle. 
+                    This map plots the coordinates of where each car is registered by latitude and longitude. Distribution 
+                    is concentrated strongly around major Washington cities such as Seattle, Tacoma, Everett, Olympia, 
+                    Yakima, Bremerton, Vancouver, and Spokane. We can see that for certain counties that appeared to 
+                    have high concentrations of EVs in the choropleth map, many of the vehicles were actually 
+                    concentrated in a city in the county, while the rest of the county has sparse distributions. 
+                    This distinction is vital, as it may provide local district lawmakers insight on where charging
+                    stations may need to be installed or where accessibility to chargers may be improved. 
+                </p>
+            </div>
+        </div>
+
+        <h3>Price Points for Electric Vehicles</h3>
+
+        <div class = 'container container3'>
+            <div class = 'text'>
+                <p>
+                    As mentioned previously, a major obstacle to broad use of electric vehicles is the price point. 
+                    There is a public conception, which is sometimes true, that EVs are more expensive to purchase
+                    than a typical gasoline fueled car. However, there is a different cost efficiency to EVs than 
+                    normal cars; despite the purchasing cost of the vehicle itself, owners save money on gas, and 
+                    do not have to worry about fickle gas prices that may change with the state of the economy. 
+                    Regardless, initial cost still matters to consumers, and our graph below aims to make buyers
+                    aware of the various Base MSRPs for the top five most common Makes in Washington.
+                </p>
+            </div>
+            <div class = 'center'>
+                <iframe src="altair-bar (1).html" width="550px" height="500px" frameborder="0"></iframe>
+            </div>
+            <div class = 'text'>
+                <p>
+                    In this graph, the number of data points at each Base MSRP is plotted. Since Makes often have 
+                    unique features that place their products at different price points, we are able to color 
+                    each bar by which Make sells vehicles at that MSRP. The presence of multiple bars of the 
+                    same color indicates the range of price points within the same manufacturer. We offer tooltip and
+                    interactivity that allows users to select a bar and gray out the rest of the bars, in order to 
+                    focus on the popularity of a vehicle at that Base MSRP value. This visualization allows 
+                    buyers to view how affordable electric vehicles are for electric vehicles, and how accessible each
+                    car is to the average consumer.
+                </p>
+            </div>
+        </div>
+
+        <h3>Value of Electric Vehicles</h3>
+
+        <div class = 'container container4'>
+            <div class = 'text'>
+                <p>
+                    Although price is a crucial factor in car purchasing decisions, other aspects of the vehicle
+                    also hold importance. The range of the vehicle, describes how far a car can travel on a tank
+                    of gas (for fuel-based vehicles) or on a full charge of the battery (for electric vehicles).
+                    Concerns about how electric range compares to fuel range have proven to be important in the 
+                    electric vehicle discussion, as shown through <a href="https://scholarworks.lib.csusb.edu/cgi/viewcontent.cgi?article=2516&context=etd">
+                    research by CSU San Bernardino</a>. Ideally, the best value of an EV would have a lower Base MSRP 
+                    and higher electric range. The visualization below demonstrates the value of various EVs:
+                </p>
+            </div>
+            <div class = 'image'>
+                <iframe src="d3graph.png" width="1000px" height="900px" frameborder="0"></iframe>
+            </div>
+            <div class = 'text'>
+                <p>
+                    This scatter plot demonstrates the relationship between Base MSRP and Electric Range for 
+                    the top seven Makes in the dataset. Different points of the same color represent different
+                    models from the same Make. Additionally, the more opaque a point, the more popular that model
+                    is in the dataset. 
+
+                    As seen through the visualization, many Makes have models with varying values. Chrysler, Mini,
+                    and Subaru models have both low Base MSRPs and low electric range, while BMW and Volvo models
+                    display poor value, with high Base MSRPs and low electric ranges. KIA has models that are 
+                    good value, with medium-high electric ranges for low Base MSRPs. Tesla stands out from the 
+                    other Makes with extremely high electric range, though all have medium-high Base MSRPs. This 
+                    visualization should help buyers to evaluate their budgets and their personal priorities for 
+                    a car before making a purchase. 
+                </p>
+            </div>
+        </div>
+
+        <h3>Conclusion and Future Work</h3>
 
         <p>
-            In this visualization analysis, we try to explore the US 
-            unemployment rate across states. We also examine the relation
-            between unemployment rate and other social factors. 
-        </p>
-        <p>
-            Unfortunately, this is the 2010 data thus may be different 
-            than the current economics status. Also, unemployment rate 
-            may fluctuate seasonally thus adding a time series analysis
-            will be more informative. 
+            Through this visualization analysis of our data, we addressed a variety of groups within the 
+            electric vehicle field. For buyers, we offer information for them to assess price levels, make, 
+            and electric range, in order to provide a guide for purchasing an EV. For manufacturers, we highlighted
+            the types of electric vehicles that customers are interested in and the areas of the state where
+            they might focus advertising efforts. For legislators, we demonstrated areas of inequality where
+            efforts to improve accessibility could drastically increase EV use, and lower carbon emissions. 
+            
+            From these visualizations, we hope that we may influence people to seriously consider electric 
+            vehicles in their transportation decisions. This could help contribute to an overall global 
+            sustainability initiative. With the rise and popularity of electric cars such as Tesla, it is 
+            very possible that EVs can see an exponential increase in purchases. 
+            
+            Future work could explore EVs in a national or global context, and how consumers demographic 
+            information correlates with EV use. Although an effective basis for the start of our research,
+            Washington cannot act as a benchmark for the entire United States of America, and insights from 
+            one state may not apply to others. Our analysis of the data can also help future work determine 
+            how and where to market electric vehicles to guarantee the most success for automotive companies.
         </p>
 
-        <p>If you are interested in the project and want to share more
-            opinions or resource about the project, please contact:
-            Xiaoyi Yang (xiaoy.yang@northeastern.edu)
+        <p>
+            Project by: Maya Sachidanand, Chapin Wilson, Celine Cerezci, Anushka Chandiramani
         </p>
 
 </body>
